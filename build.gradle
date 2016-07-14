@@ -3,7 +3,22 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+            srcDir 'src/python'
+            srcDir 'src/scala'
+        }
+    }
+    test {
+        java {
+            srcDir 'test/java'
+            srcDir 'test/python'
+            srcDir 'test/scala'
+        }
+    }
+}
 repositories {
     mavenCentral()
 }
